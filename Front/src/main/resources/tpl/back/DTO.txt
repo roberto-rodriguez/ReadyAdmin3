@@ -1,0 +1,33 @@
+ 
+package com.%pck%.dto;
+
+import com.system.dto.DTO;
+import java.util.Date;
+
+/**
+ *
+ * @author DevTool
+ */
+public class %name%DTO extends DTO{
+    
+    private Integer id;
+%fields%
+ 
+      /**
+     * @return the id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+
+    %getters_setters%
+    
+}

@@ -1,0 +1,17 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.view.%name%ViewTab', {
+    extend:'Admin.base.BaseViewTab',
+    xtype: '%lowercased_name%ViewTab', 
+    viewName:'%title%', 
+    entity:'%lowercased_name%',  
+    items: [
+        {
+            xtype: '%lowercased_name%Details'
+        },
+        {
+            xtype: '%lowercased_name%Editor' 
+        },
+        {
+            xtype: '%lowercased_name%SubPanel'
+        }
+    ] 
+});

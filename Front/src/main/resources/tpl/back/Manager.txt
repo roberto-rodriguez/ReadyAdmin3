@@ -1,0 +1,39 @@
+
+package com.%pck%.manager;
+
+import com.%pck%.dao.%name%DAO;
+import com.%pck%.dto.%name%DTO;
+import com.%pck%.model.%name%;
+import com.system.dao.AbstractBaseDAO;
+import com.system.dto.request.Hash;
+import com.system.manager.AbstractManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ *
+ * @author DevTool
+ */
+@Service
+@Transactional
+public class %name%Manager extends AbstractManager<%name%, %name%DTO>{
+    
+    @Autowired
+    private %name%DAO %lowercased_name%DAO;
+    
+    @Override
+    public AbstractBaseDAO dao() {
+        return %lowercased_name%DAO;
+    }
+    
+    @Override
+    protected %name% create(Hash data) throws Exception {
+        return new %name%();
+    }
+    
+    @Override
+    protected void update(%name% entity, Hash data) {
+%updates%
+    }
+}

@@ -1,0 +1,14 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.view.%name%Editor', {
+    extend: 'Admin.base.BaseEditor',
+    alias: 'widget.%lowercased_name%Editor', 
+    items: [
+                {
+                    items: [
+                            {
+                                xtype: 'idField' 
+                            }
+                        ]
+                },
+%items%
+    ]
+});

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="transactions" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3af271f9-84cd-4fcf-ac1f-a08a924ab5c6">
+ 	<property name="ireport.zoom" value="1.0"/>
+ 	<property name="ireport.x" value="0"/>
+ 	<property name="ireport.y" value="0"/>
+ 	<field name="type" class="java.lang.String"/>
+ 	<field name="client" class="java.lang.String"/>
+ 	<field name="merchant" class="java.lang.String"/>
+ 	<field name="maskNumber" class="java.lang.String"/>
+ 	<field name="amount" class="java.lang.Double"/>
+ 	<field name="fee" class="java.lang.Double"/>
+ 	<field name="resultMsg" class="java.lang.String"/>
+ 	<field name="creationDate" class="java.lang.Long"/>
+ 	<background>
+ 		<band splitType="Stretch"/>
+ 	</background>
+ 	<title>
+ 		<band height="79" splitType="Stretch">
+ 			<staticText>
+ 				<reportElement x="0" y="0" width="555" height="79" uuid="4cd5cc83-7529-4bf5-a86b-eef00991c13e"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="18" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Transactions Report]]></text>
+ 			</staticText>
+ 		</band>
+ 	</title>
+ 	<pageHeader>
+ 		<band splitType="Stretch"/>
+ 	</pageHeader>
+ 	<columnHeader>
+ 		<band height="41" splitType="Stretch">
+ 			<rectangle>
+ 				<reportElement x="0" y="20" width="555" height="20" backcolor="#CCCCCC" uuid="08c8bbd5-9532-461a-854a-374c8aee7574"/>
+ 			</rectangle>
+ 			<staticText>
+ 				<reportElement x="0" y="20" width="86" height="20" backcolor="#CC3300" uuid="50869a31-115d-4ab8-80fa-a74095e52883"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Type]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="86" y="21" width="63" height="20" backcolor="#CC3300" uuid="aa83dc2b-5930-4aed-b277-83271a47a17b"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Date]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="149" y="20" width="82" height="20" backcolor="#CC3300" uuid="f74c26e6-0789-4b8e-8883-efa8ddf5afef"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Merchant]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="231" y="20" width="62" height="20" backcolor="#CC3300" uuid="6c3d3524-d277-4e3e-9924-fde85a1bf600"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Client]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="293" y="20" width="50" height="20" backcolor="#CC3300" uuid="f49c0b6c-a3e8-4ffd-b6c2-51402e76387d"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Card]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="343" y="20" width="70" height="20" backcolor="#CC3300" uuid="872c220c-3e00-4210-9d74-26baadb59b9c"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Amount]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="413" y="20" width="76" height="20" backcolor="#CC3300" uuid="dbe1c562-aeb1-4165-9ceb-cc6888595251"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Fee]]></text>
+ 			</staticText>
+ 			<staticText>
+ 				<reportElement x="489" y="20" width="66" height="20" backcolor="#CCCCCC" uuid="05f363cb-acf6-416a-9cb1-62ad47cefedf"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle">
+ 					<font size="12" isBold="false"/>
+ 				</textElement>
+ 				<text><![CDATA[Result]]></text>
+ 			</staticText>
+ 		</band>
+ 	</columnHeader>
+ 	<detail>
+ 		<band height="20" splitType="Stretch">
+ 			<textField>
+ 				<reportElement x="0" y="0" width="86" height="20" uuid="c66dd4da-f3a8-4c2e-96e8-92e15d85d591"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+ 			</textField>
+ 		    <textField isStretchWithOverflow="true" pattern="MM/dd/yyyy">
+ 				<reportElement x="86" y="0" width="63" height="20" uuid="af2c96bd-4115-4f46-9d95-d009878d6e00"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[new java.util.Date($F{creationDate})]]></textFieldExpression>
+ 			</textField>
+ 			<textField>
+ 				<reportElement x="149" y="0" width="82" height="20" uuid="a74ca19e-9468-4c04-8c15-16e37700e4b4"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{merchant}]]></textFieldExpression>
+ 			</textField>
+ 			<textField>
+ 				<reportElement x="231" y="0" width="62" height="20" uuid="eeacce80-db04-430d-8bf2-1585b36d26bc"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{client}]]></textFieldExpression>
+ 			</textField>
+ 			<textField>
+ 				<reportElement x="293" y="0" width="50" height="20" uuid="3bd8a916-8667-46f5-918d-1d98379924db"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{maskNumber}]]></textFieldExpression>
+ 			</textField>
+ 			<textField pattern="##0.00">
+ 				<reportElement x="343" y="0" width="70" height="20" uuid="e88ce915-c262-4728-a556-d3070d66425d"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+ 			</textField> 
+ 			<textField pattern="##0.00">
+ 				<reportElement x="413" y="0" width="76" height="20" uuid="b6e57049-6e68-485c-af53-0018c8caf22f"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{fee}]]></textFieldExpression>
+ 			</textField>
+ 			<textField>
+ 				<reportElement x="489" y="0" width="66" height="20" uuid="7f868ecc-4403-4b23-8f9c-780b7cb655de"/>
+ 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+ 				<textFieldExpression><![CDATA[$F{resultMsg}]]></textFieldExpression>
+ 			</textField>  
+ 		</band>
+ 	</detail>
+ 	<columnFooter>
+ 		<band height="45" splitType="Stretch"/>
+ 	</columnFooter>
+ 	<pageFooter>
+ 		<band height="54" splitType="Stretch"/>
+ 	</pageFooter>
+ 	<summary>
+ 		<band height="42" splitType="Stretch"/>
+ 	</summary>
+ </jasperReport>

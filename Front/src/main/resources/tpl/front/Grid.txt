@@ -1,0 +1,16 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.grid.%name%Grid', {
+    extend: 'Admin.base.BasePaginatedGrid',
+    alias: 'widget.%lowercased_name%Grid', 
+    columns: {
+        defaults: {
+            width: '%default_width%%',
+            align: 'center'
+        },
+        items: [
+            {
+                xtype:'idGridColumn' 
+            }, 
+%items%
+        ]
+    }
+});

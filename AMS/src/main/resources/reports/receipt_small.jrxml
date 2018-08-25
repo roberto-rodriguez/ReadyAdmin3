@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="receipt" language="groovy" pageWidth="288" pageHeight="1080" columnWidth="288" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="de846d7c-0adb-4208-bf5c-b8362cb05d17">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="831"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<field name="number" class="java.lang.String"/>
+	<field name="senderName" class="java.lang.String"/>
+	<field name="receiverName" class="java.lang.String"/>
+	<title>
+		<band height="61" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="827">
+			<staticText>
+				<reportElement x="4" y="0" width="279" height="20" uuid="23718f74-5e7d-4361-ae34-89a9a00b6740"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Remesador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="92" width="274" height="20" uuid="7e0de5ad-c53b-4f7d-ae9c-33828e896188"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Agente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="20" width="274" height="20" uuid="b6c801a5-c8c7-4089-a0fc-ddb776090371"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Banco Industrial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="112" width="270" height="20" uuid="f5653963-757e-47ba-916c-ac6e98e52083"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Agent Legal Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="132" width="277" height="20" uuid="f4e384b8-72b6-479b-b7eb-3cc332819b63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[5ta Ave, 5-55 zona 14, Ciudad de Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="42" width="271" height="20" uuid="31f50af8-fb52-4549-897d-42ee456f028a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[1-800-954-5555]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="152" width="274" height="20" uuid="85471812-bf26-402f-83f1-1b799930dd70"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[502-393-5485]]></text>
+			</staticText>
+			<line>
+				<reportElement x="7" y="80" width="273" height="1" uuid="5957b8eb-3e89-4a5c-a069-55a2b976d4d3"/>
+			</line>
+			<line>
+				<reportElement x="8" y="172" width="270" height="1" uuid="a207317c-c81d-4b6c-b56d-64d196e70512"/>
+			</line>
+			<staticText>
+				<reportElement x="8" y="338" width="268" height="20" uuid="78e4b11b-4dce-4e0d-a611-0be3e5e35170"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remitente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="393" width="272" height="20" uuid="98d22392-9c00-460b-a4a9-62255f416a55"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Destinatario: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="9" y="332" width="269" height="1" uuid="d3a26546-97e4-44aa-af8f-d2f0bb8e1272"/>
+			</line>
+			<line>
+				<reportElement x="14" y="613" width="267" height="2" uuid="d8440c82-6ff8-4a3e-a40d-5ec10e43af48"/>
+			</line>
+			<staticText>
+				<reportElement x="13" y="527" width="261" height="20" uuid="b2de48b6-9f76-47bc-adec-620f23bf0918"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Firma del Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="615" width="264" height="20" uuid="03ea1dd7-6ba8-4c8e-acc2-9f630ed09fe8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Firma Cajero ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="9" y="525" width="268" height="2" uuid="cd2a3d71-21cc-4da4-bb49-a37e1829c1b7"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="648" width="262" height="20" uuid="a9fa0410-224b-4ccc-9d7d-2a09047bb98b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Privacidad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="679" width="274" height="128" uuid="57e2d7c4-8cfd-47b9-bb75-31b5b78a6742"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<text><![CDATA[ La entrega de remesas es ofrecida por Banco Inmobiliario.  Los envíos de dinero pueden implicar un diferencial cambiario con la moneda oficial del país destino, para lo cuál éste recibo de pago deberá indicar la tasa a ser aplicada, cuando aplique.  Banco Inmobiliario puede ganar dinero en la conversión de moneda, en adición a la tarifa de envío.  La entrega del dinero está sujeta a validación de la identidad por parte de Banco Inmobiliario y a las normas de envío de dinero del regulador local.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="8" y="358" width="268" height="20" uuid="46cea1b0-7ba0-4307-92e0-c48903f28ec0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{senderName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="9" y="413" width="270" height="20" uuid="aa8b0823-28ed-4d89-9753-b1f897cca104"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receiverName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="239" width="262" height="20" uuid="4ffcb3af-74ee-459e-baa1-3aa26f2fd4e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[ Monto Enviado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="259" width="137" height="20" uuid="80039d22-9d31-467c-8d44-d4ea49142a52"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Q ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="286" width="258" height="20" uuid="ed588bef-b46a-4a71-812a-9312b4c0b911"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Clave de Pago:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="214" width="131" height="20" uuid="373c7bae-0d79-43e6-9dd8-a81d48ef089b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="259" width="125" height="20" uuid="c97d660f-1bf9-4358-a85c-bc6928c3bddf"/>
+				<textElement>
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="184" width="269" height="20" uuid="b3743f89-e17a-423b-ad39-1bed2678e3d4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="146" y="214" width="137" height="20" uuid="4c14eb5f-6297-41a6-aa4d-f36310eabe86"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="306" width="259" height="20" uuid="729f07a9-71a3-40f0-9b88-2ea92b5a9eba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

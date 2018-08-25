@@ -1,0 +1,7 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.%name%SubPanel', {
+    extend: 'Admin.base.BaseSubPanel',
+    xtype: '%lowercased_name%SubPanel',
+    config: {
+        subPanels: []
+    }
+});

@@ -1,0 +1,20 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.view.%name%Details', {
+    extend: 'Admin.base.BaseDetails',
+    xtype: '%lowercased_name%Details',
+    items: [
+        {
+            xtype: 'component',
+            flex: 1, 
+            data: {},
+            tpl: new Ext.XTemplate([
+                '<div style="padding:20px">',
+                '<table cellpadding="10" style="width:100%;cellspacing">',
+%fields% 
+                '</table>',
+                '<div>'
+            ].join('') 
+
+            )
+        }
+    ]
+});

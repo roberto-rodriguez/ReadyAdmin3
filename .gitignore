@@ -1,0 +1,15 @@
+Front/target/
+Front/src/main/resources/hibernate.properties
+AMS/target/
+AMS/src/main/webapp/build/
+AMS/src/main/webapp/${ext.dir}/
+AMS/src/main/webapp/.idea/
+AMS/src/main/webapp/.sass-cache/ 
+AMS/src/main/webapp/classic.json
+AMS/src/main/webapp/classic.jsonp
+AMS/src/main/webapp/sass/example/bootstrap.json
+AMS/src/main/webapp/sass/example/bootstrap.jsonp
+Front/src/main/resources/hibernate.properties
+/Front/src/main/resources/hibernate.properties
+Front/src/main/resources/hibernate.properties
+Front/src/main/resources/hibernate.properties

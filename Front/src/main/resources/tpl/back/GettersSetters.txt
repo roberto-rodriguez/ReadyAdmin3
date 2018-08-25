@@ -1,0 +1,14 @@
+
+    /**
+     * @return the %name%
+     */ 
+    public %type% get%capitalized_name%() {
+        return %name%;
+    }
+
+    /**
+     * @param %name% the %name% to set
+     */
+    public void set%capitalized_name%(%type% %name%) {
+        this.%name% = %name%;
+    }

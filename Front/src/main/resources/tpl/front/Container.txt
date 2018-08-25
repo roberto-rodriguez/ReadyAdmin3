@@ -1,0 +1,9 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.%name%Container', {
+    extend: 'Admin.base.BaseContainer', 
+    xtype: '%lowercased_name%s',  
+    items: [
+        {
+          xtype:'%lowercased_name%GridTab' 
+        } 
+    ]
+});

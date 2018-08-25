@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="recibo" language="groovy" pageWidth="252" pageHeight="432" columnWidth="252" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" uuid="93bfeebd-4b94-4fd2-8a61-3c70f94cc67d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="client" class="java.lang.String"/>
+	<field name="number" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="19" width="248" height="29" uuid="c9822cd0-c0ce-49be-8ecb-293b0d364f5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Banco Inmobiliario]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="14" width="246" height="20" uuid="e6976b09-303c-4cd2-a717-c573d58c911e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="9" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="216" splitType="Stretch">
+			<textField>
+				<reportElement x="103" y="28" width="145" height="20" uuid="2df3876a-9eec-4e9a-89bc-b9fcddad5e20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement x="103" y="56" width="143" height="20" uuid="4aafbbcd-495e-4814-9576-f569ba2afb07"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="46" y="28" width="57" height="20" uuid="754b2bad-a963-4947-af43-901715169df0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Cuenta:    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="56" width="57" height="20" uuid="f72cd0a9-c0fb-46b8-963c-65e1eeda2755"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Monto: Q ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="0" width="57" height="20" uuid="ec238e52-4d75-48a3-bbee-ee79c5e24fb0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nombre:    ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="103" y="0" width="143" height="20" uuid="9789b0ec-ac3f-44f8-a6d3-7126ebdf4147"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{client}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="46" y="83" width="57" height="20" uuid="0ffb0485-dc33-4e66-9f2b-5fd25e1a82b3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Fecha:    ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="103" y="83" width="145" height="20" uuid="fa9228a5-387a-46ec-9fb0-853096b81f58"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="15" y="178" width="216" height="1" uuid="64694701-a652-43bf-bc29-ddbc3456de4e"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="184" width="248" height="20" uuid="0e9b1777-210e-4879-9b5f-2bf387fbfc79"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Firma del Cliente]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

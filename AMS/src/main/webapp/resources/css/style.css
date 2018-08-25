@@ -1,0 +1,42 @@
+.disabled-button{
+    background-color: rgb(192,192,192)!important;
+    border-color: rgb(192,192,192)!important;
+}
+
+.active-button{
+    background-color:#3b5998!important;
+    border-color:#3b5998!important; 
+}
+
+.square{
+    box-shadow: 1px 1px 3px rgba(0,0,0,.16), 1px 1px 3px rgba(0,0,0,.23);
+    z-index: 2;
+}
+
+.card div {
+    background-color: transparent!important;
+}
+
+.card:hover{
+    background-color: rgba(1,1,1, 0.05)!important;
+}
+
+.active-button span span span{
+    color:white!important
+}
+
+.square span span span {
+    font-size: 28px!important; 
+    width: 100%!important;
+}
+
+.avatar { 
+    color: white!important;
+    padding: 10px!important;
+    font-size: 20px!important;
+    border-radius: 20px;
+}
+
+.display-none{ 
+    display: none!important; 
+}

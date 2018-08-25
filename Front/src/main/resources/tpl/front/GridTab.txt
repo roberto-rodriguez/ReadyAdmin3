@@ -1,0 +1,15 @@
+Ext.define('Admin.%uipck%.%lowercased_name%.grid.%name%GridTab', {
+    extend:'Admin.base.BaseGridTab',
+    xtype: '%lowercased_name%GridTab', 
+    title: '%title%',   
+    entity:'%lowercased_name%',
+    filters:'%lowercased_name%.id', 
+    items: [ 
+        {
+            xtype: '%lowercased_name%Grid' 
+        }, 
+        {
+            xtype: '%lowercased_name%SubPanel'
+        }
+    ]
+});

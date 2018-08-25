@@ -1,0 +1,27 @@
+ 
+package com.%pck%.web;
+
+import com.%pck%.manager.%name%Manager;
+import com.system.manager.AbstractManager;
+import com.system.web.AbstractController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ *
+ * @author DevTool
+ */
+@RestController
+@RequestMapping(value = "/{pageId}/%lowercased_name%")
+public class %name%Controller extends AbstractController{
+    
+    @Autowired
+    protected %name%Manager %lowercased_name%Manager;
+     
+
+    @Override
+    public AbstractManager getAbstractManager() {
+       return %lowercased_name%Manager;
+    } 
+}

@@ -1,0 +1,31 @@
+
+package com.%pck%.dao;
+
+import com.%pck%.dto.%name%DTO; 
+import com.%pck%.model.%name%;
+import com.system.dao.AbstractBaseDAO;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.ProjectionList;
+import org.hibernate.criterion.Projections;
+import org.hibernate.transform.Transformers;
+import org.springframework.stereotype.Repository;
+
+/**
+ *
+ * @author DevTool
+ */
+@Repository
+public class %name%DAO extends AbstractBaseDAO<%name%, %name%DTO>{
+ 
+    
+    @Override
+    public void applyListProjection(Criteria criteria) {
+        ProjectionList projectionList = Projections.projectionList()
+                .add(Projections.property("id").as("id"))
+%projections% 
+
+        criteria.setProjection(projectionList)
+                .setResultTransformer(Transformers.aliasToBean(%name%DTO.class));
+    }
+}

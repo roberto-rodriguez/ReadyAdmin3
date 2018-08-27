@@ -1,9 +1,0 @@
-fieldset, .x-fieldset{
-    border-width: 0.5px;
-    border-color: grey;
-    border-style: dotted;
-    width: 100%;
-    padding-right:10px;
-    background-color: white;
-    background: white!important;
-}

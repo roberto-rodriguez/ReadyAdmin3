@@ -28,15 +28,15 @@ public class GeneralController {
     private AuthManager authManager;
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request, @CookieValue(value = "RA_T0k3n", required = false) String token) {
-        System.out.println("index... token = " + token);
+    public ModelAndView index() {
+        System.out.println("index...");
 
         String sessionData = null;
 
-        if (token != null && !token.isEmpty()) {
-            System.out.println("Calling autoLogin...");
-            sessionData = authManager.autoLogin(request.getRequestURL().toString(), token);
-        }
+//        if (token != null && !token.isEmpty()) {
+//            System.out.println("Calling autoLogin...");
+//            sessionData = authManager.autoLogin(request.getRequestURL().toString(), token);
+//        }
 
         return new ModelAndView("index", "sessionData", sessionData);
     }

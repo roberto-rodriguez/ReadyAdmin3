@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: [
     'font-awesome/scss/font-awesome.scss',
-    './src/index.js'
+    './app/index.js'
   ],
   output: {
     filename: 'bundle.js',

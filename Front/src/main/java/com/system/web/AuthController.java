@@ -20,10 +20,10 @@ import com.system.dto.request.Hash;
 import com.system.session.Principal;
 import com.system.dto.response.WebResponseData;
 import com.system.session.AccessService;
-import com.system.session.LoginService; 
+import com.system.session.LoginService;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -49,18 +49,19 @@ public class AuthController extends HttpServlet {
     @RequestMapping(value = "/ping")
     public @ResponseBody
     String ping(HttpSession session) {
+        System.out.println("Calling ping...");
         return "PING";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, consumes = "application/json")
-    public WebResponseData login(@RequestBody Hash data, HttpSession session) { 
-        System.out.println("data = " + data); 
+    public WebResponseData login(@RequestBody Hash data, HttpSession session) {
+        System.out.println("data = " + data);
         try {
-            return loginService.login(session, data, true); 
+            return loginService.login(session, data, true);
         } catch (Exception e) {
             e.printStackTrace();
             return WebResponseData.forException(e);
-        } 
+        }
     }
 
 //    @RequestMapping(value = "/checkAccess")

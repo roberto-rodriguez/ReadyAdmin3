@@ -1,0 +1,43 @@
+{
+  "name": "wp-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.production.config.js",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --hot"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "node-sass": "^4.9.3",
+    "popper.js": "^1.14.4",
+    "react": "^16.4.2",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "font-awesome-loader": "^1.0.2",
+    "mini-css-extract-plugin": "^0.4.2",
+    "postcss-loader": "^3.0.0",
+    "precss": "^3.1.2",
+    "style-loader": "^0.22.1",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

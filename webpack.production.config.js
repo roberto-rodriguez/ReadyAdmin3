@@ -73,6 +73,10 @@ module.exports = {
             outputPath: 'fonts/'
           }
         }]
+      },
+      {
+        test: /\.hbs$/,
+        use: ['handlebars-loader']
       }
     ]
   },
@@ -86,7 +90,9 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Hello World',
-      filename:'index.jsp'
+      filename:'index.jsp',
+      template: 'app/indexTpl.hbs',
+      description: 'Put the description here'
     })
   ]
 }

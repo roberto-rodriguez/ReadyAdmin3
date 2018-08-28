@@ -1,23 +1,17 @@
-import helloWorld from './hello-world.js'
-import addImage from './add-image.js'
+
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+//
+// Needed for redux-saga es6 generator support
+import 'babel-polyfill';
+import App from './App';
+
 import HelloWorldButton from './components/hello-world-button/hello-world-button.js'
 import Heading from './components/heading/Heading.js'
 import _ from 'lodash'
 import HOST from './ENV'
 import 'bootstrap';
-import './index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-const heading = new Heading();
-
-addImage();
-
- var userName = _.upperFirst('roberto');
-heading.render(userName);
-
-const helloWorldButton = new HelloWorldButton();
-helloWorldButton.render();
-
 
 
 if(process.env.NODE_ENV === 'production'){
@@ -27,3 +21,24 @@ if(process.env.NODE_ENV === 'production'){
   console.log('Development Mode');
    window.HOST = HOST;
 }
+
+
+const MOUNT_NODE = document.getElementById('app');
+
+  ReactDOM.render(
+    <App/>,
+    MOUNT_NODE,
+  );
+
+/*
+
+const heading = new Heading();
+
+
+ var userName = _.upperFirst('roberto');
+heading.render(userName);
+
+const helloWorldButton = new HelloWorldButton();
+helloWorldButton.render();
+
+*/

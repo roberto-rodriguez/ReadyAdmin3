@@ -89,7 +89,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Hello World',
       filename:'index.html',
-      template: 'app/indexTpl.hbs',
+      template: 'app/conf/indexTpl.hbs',
       description: 'Put the description here'
     })
   ]
